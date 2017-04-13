@@ -1,0 +1,7 @@
+---
+- name: Create jq_file variable
+  set_fact:
+    jq_file: "jq-{{ jq_version }}-{{ ansible_system|lower }}-{{ ansible_architecture }}"
+
+- name: Ensure jq is installed
+  copy: "src={{ jq_file }} dest=/usr/local/bin/jq mode=0755"
