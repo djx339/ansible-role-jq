@@ -18,6 +18,20 @@ Dependencies
 
 None
 
+Installing
+----------
+
+This role is only avaiable on github. You can install it by create a `roles.yml` file and install it by `ansible-galaxy install -r roles.yml`
+
+The jq role section of the content of the roles.yml
+
+```yaml
+# jq
+- src: https://github.com/djx339/ansible-role-jq
+  name: jq
+```
+
+
 Example Playbook
 ----------------
 
