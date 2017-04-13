@@ -1,31 +1,38 @@
-Role Name
+Ansible Role: jq
 =========
 
-A brief description of the role goes here.
+Install [jq](https://stedolan.github.io/jq/), a lightweight and flexible command-line JSON processor, on any Linux system.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+`jq_version`: The version of jq. Avaiable values: 1.5, 1.4, 1.3. (default: 1.5)
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Using default version:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - { role: jq }
+
+
+Specify version:
+
+    - hosts: servers
+      roles:
+         - { role: jq, jq_version: 1.5 }
 
 License
 -------
@@ -35,4 +42,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role was created by [Daniel D](https://github.com/djx339).
